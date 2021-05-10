@@ -1,0 +1,57 @@
+Question
+Make a simple todo app with Vuejs, just need two features in the app 
+1.To add a todo
+2.To display all todo
+
+code:
+<template>
+  <div id="app">
+  <div>My little to do list</div>
+    <todo-list />
+  </div>
+</template>
+
+<script>
+import TodoList from "./components/TodoList";
+export default {
+  name: 'app',
+  name: "app",
+  components: {
+      TodoList
+    TodoList
+  }
+}
+};
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 40px;
+  margin-top: 5px;
+  background-color: #56b0ee;
+}
+</style>
+
+<template>
+  <div class="hello">
+    <div>
+    <div class="filter-bar">
+      <button @click="filterBy = 'all'">all</button>
+      <button @click="filterBy = 'todo'">todo</button>
+      <button @click="filterBy = 'done'">done</button>
+@@ -83,5 +83,10 @@ export default {
+<style scoped>
+.blue {
+  background-color: cornflowerblue;
+}
+  .filter-bar{
+    display: flex;
+    justify-content: space-around;
+    padding: 3px 0;
+}
+</style>
