@@ -1,0 +1,83 @@
+Question 1
+Define an array of numbers (use any random numbers). Write a program to print only the even numbers of the array. Do not use any library functions, need to do via for loops only
+
+Code:
+    function que0(array){
+    console.log(array);
+     let arr = [];
+      for (let i = 0; i < array.length; i++){
+        if (array[i] % 2 === 0){
+          arr.push(array[i]);
+        }
+      }
+      return array;
+    }
+
+Question 2
+Find the maximum consecutive 1's in an array of 0's and 1's.
+Example:
+a) 00110001001110 - Output :3 [Max num of consecutive 1's is 3]
+b) 1000010001 - Output :1 [Max num of consecutive 1's is 1]
+
+Code:
+  var findMaxConsecutiveOnes = function(nums) {
+      let largest = 0;
+      let current = 0;
+      for (let i = 0; i<nums.length; i++) {
+          nums[i] === 0 ? current = 0 : current++;
+          if (current > largest) largest = current;
+      };
+      return largest;
+  };
+ 
+ Question 3
+Suppose you have an array of 101 integers. This array is already sorted and all numbers in this array are consecutive. Each number only occurs once in the array except one number which occurs twice. Write a js code to find the repeated number.
+
+ code: 
+  function Repeat(arr , size)
+    {
+        var i, j;
+        document.write("Repeated Elements are :");
+        for (i = 0; i < size; i++)
+        {
+            for (j = i + 1; j < size; j++)
+            {
+                if (arr[i] == arr[j])
+                    document.write(arr[i] + " ");
+            }
+        }
+    }
+ 
+var arr = [4, 2, 4, 5, 2, 3, 1];
+var arr_size = arr.length;
+Repeat(arr, arr_size);
+
+
+Question 4
+Let’s see we an api url www.example.com/api/get/1 
+Write a sample code to call this rest api and display the result.
+
+code:
+const API_URL = 'https:// www.example.com/api/get/1';
+
+const REQUEST_HEADERS = {
+  'X-RapidAPI-Host': 'japerk-text-processing.p.rapidapi.com'
+  , 'X-RapidAPI-Key': '7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  , 'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+Question 5
+Assume there is a object of this format 
+var obj = {
+ “id” : 4, “name” : “abc”,
+ “id” : 10, “name” : “ab2”,
+ “id” : 5, “name” : “abc3”,
+ “id” : 6, “name” : “abc5”
+}
+It can be a dictionary or java object, as per your language of choice. But its key/value pair dictionary simply.
+
+Write a code to sort the object by id 
+I.e final output should have objected sort by id’s
+
+code:
+elems.sort((a, b) => a.id - b.id);
